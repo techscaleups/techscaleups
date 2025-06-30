@@ -3,24 +3,27 @@ name: Deploy to VPS
 on:
   push:
     branches:
-      - main  # Trigger only on main branch push
+      - main  # Change if your default branch is not 'main'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Deploy to VPS via SCP
-      uses: appleboy/scp-action@v0.1.4
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.PRIVATE_KEY }}
-        port: ${{ secrets.PORT }}
-        source: ${{ secrets.SOURCE }}
-        target: ${{ secrets.TARGET }}
-        rm: true               # Optional: remove extra files on server
-        strip_components: 1   # Optional: avoid nesting folder (if zipped)
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+
+      - name: Deploy via SSH
+        run: |
+          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} "
+            cd /var/www/html/techscaleups &&
+            git pull origin main &&
+            chown -R www-data:www-data /var/www/html/techscaleups
+          "
