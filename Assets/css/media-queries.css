@@ -10,6 +10,10 @@
     width: 100%;
     padding: 8px 10px;
   }
+  
+.blur-box {
+ padding: 20px 0px;
+}
 }
 
 /* 321px to 375px - Small phones */
