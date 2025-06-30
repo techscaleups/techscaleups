@@ -22,7 +22,11 @@
   <header>
     <nav class="navbar navbar-expand-lg fixed-top py-3 bg-white border-bottom">
       <div class="container-fluid">
-        <a class="navbar-brand fw-bold fs-4 text-primary" href="index.html"><img src="/Assets/images/SCALEUPLOGO.png" width="40px" alt="">Scaleups</a>
+  <a class="navbar-brand fw-bold fs-4 d-flex align-items-center justify-content-center gap-2" href="index.html">
+  <img src="/Assets/images/SCALEUPLOGO.png" width="50px" alt="SCALEUP Logo">
+  <span class="logo_color">SCALEUPS</span>
+</a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -74,13 +78,13 @@
             </li>
 
             <!-- About -->
- 
-      <!-- Home -->
-      <li class="nav-item">
-        <a class="nav-link" href="about.html">
-          <i class="bi  me-2"></i> About Us
-        </a>
-      </li>
+
+            <!-- Home -->
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">
+                <i class="bi  me-2"></i> About Us
+              </a>
+            </li>
 
             <!-- Resources -->
             <li class="nav-item dropdown">
@@ -107,133 +111,138 @@
 
         <!-- CTA Button -->
         <div class="d-none d-lg-block">
-            <a href="get-started.html" class="btn btn-info text-white w-100">
-          <i class="bi bi-rocket-takeoff me-2"></i> Get Started
-        </a>
+          <a href="get-started.html" class="btn btn-info text-white w-100">
+            <i class="bi bi-rocket-takeoff me-2"></i> Get Started
+          </a>
         </div>
       </div>
     </nav>
   </header>
   <!-- Offcanvas Sidebar for Mobile -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title text-primary fw-bold" id="mobileSidebarLabel">Scaleups</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <ul class="navbar-nav fw-medium text-dark text-uppercase">
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title text-primary fw-bold" id="mobileSidebarLabel">Scaleups</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav fw-medium text-dark text-uppercase">
 
-      <!-- Home -->
+        <!-- Home -->
         <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <i class="bi bi-house me-2"></i> Home
-        </a>
-      </li> 
-   
-      <!-- Platform -->
-      <li class="nav-item">
-        <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#platformMenu" role="button">
-          <span><i class="bi bi-layers me-2"></i> Platform</span>
-          <i class="bi bi-chevron-down"></i>
-        </a>
-        <div class="collapse" id="platformMenu">
-          <ul class="list-unstyled ps-4">
-            <li><a class="nav-link" href="platform-dashboard.html">Dashboard</a></li>
-            <li><a class="nav-link" href="platform-hosting.html">Hosting</a></li>
-            <li><a class="nav-link" href="platform-seo.html">SEO Tools</a></li>
-            <li><a class="nav-link" href="platform-performance.html">Performance</a></li>
-          </ul>
-        </div>
-      </li>
+          <a class="nav-link" href="index.html">
+            <i class="bi bi-house me-2"></i> Home
+          </a>
+        </li>
 
-      <!-- Industries -->
-      <li class="nav-item">
-        <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#industriesMenu" role="button">
-          <span><i class="bi bi-building me-2"></i> Industries</span>
-          <i class="bi bi-chevron-down"></i>
-        </a>
-        <div class="collapse" id="industriesMenu">
-          <ul class="list-unstyled ps-4">
-            <li><a class="nav-link" href="industries-startups.html">Startups</a></li>
-            <li><a class="nav-link" href="industries-ecommerce.html">E-commerce</a></li>
-            <li><a class="nav-link" href="industries-healthcare.html">Healthcare</a></li>
-            <li><a class="nav-link" href="industries-education.html">Education</a></li>
-            <li><a class="nav-link" href="industries-realestate.html">Real Estate</a></li>
-          </ul>
-        </div>
-      </li>
+        <!-- Platform -->
+        <li class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+            href="#platformMenu" role="button">
+            <span><i class="bi bi-layers me-2"></i> Platform</span>
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <div class="collapse" id="platformMenu">
+            <ul class="list-unstyled ps-4">
+              <li><a class="nav-link" href="platform-dashboard.html">Dashboard</a></li>
+              <li><a class="nav-link" href="platform-hosting.html">Hosting</a></li>
+              <li><a class="nav-link" href="platform-seo.html">SEO Tools</a></li>
+              <li><a class="nav-link" href="platform-performance.html">Performance</a></li>
+            </ul>
+          </div>
+        </li>
 
-      <!-- Solutions -->
-      <li class="nav-item">
-        <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#solutionsMenu" role="button">
-          <span><i class="bi bi-lightbulb me-2"></i> Solutions</span>
-          <i class="bi bi-chevron-down"></i>
-        </a>
-        <div class="collapse" id="solutionsMenu">
-          <ul class="list-unstyled ps-4">
-            <li><a class="nav-link" href="solutions-startup-websites.html">Static Website</a></li>
-            <li><a class="nav-link" href="solutions-seo.html">SEO Optimization</a></li>
-            <li><a class="nav-link" href="solutions-marketing.html">Marketing</a></li>
-            <li><a class="nav-link" href="solutions-branding.html">Branding</a></li>
-            <li><a class="nav-link" href="solutions-uiux.html">UI/UX</a></li>
-            <li><a class="nav-link" href="solutions-mobile.html">Responsive Design</a></li>
-            <li><a class="nav-link" href="solutions-crm.html">CRM Integration</a></li>
-          </ul>
-        </div>
-      </li>
-   
-<!-- 
+        <!-- Industries -->
+        <li class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+            href="#industriesMenu" role="button">
+            <span><i class="bi bi-building me-2"></i> Industries</span>
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <div class="collapse" id="industriesMenu">
+            <ul class="list-unstyled ps-4">
+              <li><a class="nav-link" href="industries-startups.html">Startups</a></li>
+              <li><a class="nav-link" href="industries-ecommerce.html">E-commerce</a></li>
+              <li><a class="nav-link" href="industries-healthcare.html">Healthcare</a></li>
+              <li><a class="nav-link" href="industries-education.html">Education</a></li>
+              <li><a class="nav-link" href="industries-realestate.html">Real Estate</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Solutions -->
+        <li class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+            href="#solutionsMenu" role="button">
+            <span><i class="bi bi-lightbulb me-2"></i> Solutions</span>
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <div class="collapse" id="solutionsMenu">
+            <ul class="list-unstyled ps-4">
+              <li><a class="nav-link" href="solutions-startup-websites.html">Static Website</a></li>
+              <li><a class="nav-link" href="solutions-seo.html">SEO Optimization</a></li>
+              <li><a class="nav-link" href="solutions-marketing.html">Marketing</a></li>
+              <li><a class="nav-link" href="solutions-branding.html">Branding</a></li>
+              <li><a class="nav-link" href="solutions-uiux.html">UI/UX</a></li>
+              <li><a class="nav-link" href="solutions-mobile.html">Responsive Design</a></li>
+              <li><a class="nav-link" href="solutions-crm.html">CRM Integration</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 
       abuot us  -->
 
-         <li class="nav-item">
-        <a class="nav-link" href="about.html">
-          <i class="bi bi-info-circle me-2"></i> About Us
-        </a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">
+            <i class="bi bi-info-circle me-2"></i> About Us
+          </a>
+        </li>
 
 
-        
 
-      <!-- Resources -->
-      <li class="nav-item">
-        <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#resourcesMenu" role="button">
-          <span><i class="bi bi-journal-text me-2"></i> Resources</span>
-          <i class="bi bi-chevron-down"></i>
-        </a>
-        <div class="collapse" id="resourcesMenu">
-          <ul class="list-unstyled ps-4">
-            <li><a class="nav-link" href="resources-blog.html">Blog</a></li>
-            <li><a class="nav-link" href="resources-case-studies.html">Case Studies</a></li>
-            <li><a class="nav-link" href="resources-help.html">Help Center</a></li>
-            <li><a class="nav-link" href="resources-faq.html">FAQs</a></li>
-          </ul>
-        </div>
-      </li>
 
-      <!-- Careers -->
-      <li class="nav-item">
-        <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#careersMenu" role="button">
-          <span><i class="bi bi-briefcase me-2"></i> Careers</span>
-          <i class="bi bi-chevron-down"></i>
-        </a>
-        <div class="collapse" id="careersMenu">
-          <ul class="list-unstyled ps-4">
-            <li><a class="nav-link" href="careers-openings.html">Open Positions</a></li>
-            <li><a class="nav-link" href="careers-life.html">Life at ScaleUp</a></li>
-            <li><a class="nav-link" href="careers-internships.html">Internships</a></li>
-          </ul>
-        </div>
-      </li>
+        <!-- Resources -->
+        <li class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+            href="#resourcesMenu" role="button">
+            <span><i class="bi bi-journal-text me-2"></i> Resources</span>
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <div class="collapse" id="resourcesMenu">
+            <ul class="list-unstyled ps-4">
+              <li><a class="nav-link" href="resources-blog.html">Blog</a></li>
+              <li><a class="nav-link" href="resources-case-studies.html">Case Studies</a></li>
+              <li><a class="nav-link" href="resources-help.html">Help Center</a></li>
+              <li><a class="nav-link" href="resources-faq.html">FAQs</a></li>
+            </ul>
+          </div>
+        </li>
 
-      <!-- CTA -->
-      <li class="nav-item mt-3">
-        <a href="get-started.html" class="btn btn-info text-white w-100">
-          <i class="bi bi-rocket-takeoff me-2"></i> Get Started
-        </a>
-      </li>
-    </ul>
+        <!-- Careers -->
+        <li class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+            href="#careersMenu" role="button">
+            <span><i class="bi bi-briefcase me-2"></i> Careers</span>
+            <i class="bi bi-chevron-down"></i>
+          </a>
+          <div class="collapse" id="careersMenu">
+            <ul class="list-unstyled ps-4">
+              <li><a class="nav-link" href="careers-openings.html">Open Positions</a></li>
+              <li><a class="nav-link" href="careers-life.html">Life at ScaleUp</a></li>
+              <li><a class="nav-link" href="careers-internships.html">Internships</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- CTA -->
+        <li class="nav-item mt-3">
+          <a href="get-started.html" class="btn btn-info text-white w-100">
+            <i class="bi bi-rocket-takeoff me-2"></i> Get Started
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 
 
   <!-- Your content goes here -->
