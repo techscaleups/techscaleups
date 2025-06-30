@@ -130,6 +130,14 @@ line-height: 28px;
   transition: all 0.4s ease;
   box-shadow: 0 5px 15px rgba(0, 210, 143, 0.3);
 }
+.client-logo {
+  max-height: 60px;
+  object-fit: contain;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
 
 .btn-info:hover {
   transform: scale(1.05);
