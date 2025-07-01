@@ -907,6 +907,7 @@
   </section>
 
 
+  
 <section class="contact-section py-80 bg-light">
   <div class="container">
     <h2 class="text-center">Contact</h2>
@@ -965,8 +966,47 @@
 
     </div>
   </div>
-</section>
+  <script>
 
+
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = {
+      name: document.getElementById('name').value,
+      phone: document.getElementById('phone').value,
+      email: document.getElementById('email').value,
+      service: document.getElementById('service').value,
+      message: document.getElementById('message').value
+    };
+
+    try {
+      const res = await fetch('https://email.techscaleups.in/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert('✅ Message sent successfully!');
+        document.getElementById('contactForm').reset();
+      } else {
+        alert('❌ Failed: ' + data.message);
+      }
+
+    } catch (err) {
+      console.error(err);
+      alert('❌ Something went wrong.');
+    }
+  });
+
+</script>
+
+</section>
 
 
 
