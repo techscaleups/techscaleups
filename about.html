@@ -906,7 +906,105 @@
     </div>
   </section>
 
-   <div id="contact-placeholder"></div>
+
+<section class="contact-section py-80 bg-light">
+  <div class="container">
+    <h2 class="text-center">Contact</h2>
+    <p class="mb-5 text-center">Let’s start building something amazing together.</p>
+    <div class="row align-items-center">
+
+      <!-- Left Column - SVG Image -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <!-- (SVG REMAINS UNCHANGED) -->
+        <!-- [Paste your full SVG here exactly as it is, no changes needed] -->
+        <!-- For brevity, skipping SVG content here but you can keep it as-is -->
+        [YOUR FULL SVG GOES HERE]
+      </div>
+
+      <!-- Right Column - Contact Form -->
+      <div class="col-md-6 col-12 col-lg-6 Column_Form">
+        <h2 class="mb-4">Get in Touch</h2>
+        <form id="contactForm">
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input id="name" name="name" type="text" class="form-control py-3" placeholder="Your Name" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input id="phone" name="phone" type="tel" class="form-control py-3" placeholder="+91 9876543210" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input id="email" name="email" type="email" class="form-control py-3" placeholder="name@example.com" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">What Service Do You Need?</label>
+            <select id="service" name="service" class="form-select py-3" required>
+              <option disabled selected>-- Select a Service --</option>
+              <option>Static Website</option>
+              <option>SEO Optimization</option>
+              <option>Marketing</option>
+              <option>Branding</option>
+              <option>UI/UX Design</option>
+              <option>Responsive Design</option>
+              <option>CRM Integration</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Your Message</label>
+            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-info text-white px-4">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script>
+
+
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = {
+      name: document.getElementById('name').value,
+      phone: document.getElementById('phone').value,
+      email: document.getElementById('email').value,
+      service: document.getElementById('service').value,
+      message: document.getElementById('message').value
+    };
+
+    try {
+      const res = await fetch('https://email.techscaleups.in/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert('✅ Message sent successfully!');
+        document.getElementById('contactForm').reset();
+      } else {
+        alert('❌ Failed: ' + data.message);
+      }
+
+    } catch (err) {
+      console.error(err);
+      alert('❌ Something went wrong.');
+    }
+  });
+
+</script>
 
 
 
