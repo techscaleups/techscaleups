@@ -520,3 +520,17 @@ footer h6 {
   transform: scale(1.05);
   cursor: pointer;
 }
+
+
+/* contact css */
+
+
+.Column_Form{
+   padding: 30px;
+  background: rgba(255, 255, 255, 0.2); /* transparent white */
+  backdrop-filter: blur(10px);          /* blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* for Safari */
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* optional border */
+}

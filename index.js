@@ -21,3 +21,14 @@
     .then(data => {
       document.getElementById("coming-banner-placeholder").innerHTML = data;
     });
+
+      fetch("contact.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("contact-placeholder").innerHTML = data;
+      });
+
+   const choices = new Choices('#service', {
+    searchEnabled: false,
+    itemSelectText: '',
+  });
