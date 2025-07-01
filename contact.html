@@ -168,54 +168,56 @@ Message: Let's collaborate!
       </div>
 
       <!-- Right Column - Contact Form -->
-      <div class="col-md-6 col-12 col-lg-6 Column_Form">
-        <h2 class="mb-4">Get in Touch</h2>
-        <form id="contactForm">
-          <div class="mb-3">
-            <label class="form-label">Full Name</label>
-            <input id="name" name="name" type="text" class="form-control py-3" placeholder="Your Name" required>
-          </div>
+ <div class="col-md-6 col-12 col-lg-6 Column_Form">
+  <h2 class="mb-4">Get in Touch</h2>
+  <form id="contactForm">
+    <div class="mb-3">
+      <label class="form-label">Full Name</label>
+      <input id="name" name="name" type="text" class="form-control py-3" placeholder="Your Name" required>
+    </div>
 
-          <div class="mb-3">
-            <label class="form-label">Phone Number</label>
-            <input id="phone" name="phone" type="tel" class="form-control py-3" placeholder="+91 9876543210" required>
-          </div>
+    <div class="mb-3">
+      <label class="form-label">Phone Number</label>
+      <input id="phone" name="phone" type="tel" class="form-control py-3" placeholder="+91 9876543210" required>
+    </div>
 
-          <div class="mb-3">
-            <label class="form-label">Email Address</label>
-            <input id="email" name="email" type="email" class="form-control py-3" placeholder="name@example.com"
-              required>
-          </div>
+    <div class="mb-3">
+      <label class="form-label">Email Address</label>
+      <input id="email" name="email" type="email" class="form-control py-3" placeholder="name@example.com" required>
+    </div>
 
-          <div class="mb-3">
-            <label class="form-label">What Service Do You Need?</label>
-            <select id="service" name="service" class="form-select py-3" required>
-              <option disabled selected>-- Select a Service --</option>
-              <option value="web_design">Static Website</option>
-              <option value="seo">SEO Optimization</option>
-              <option value="marketing">Marketing</option>
-              <option value="branding">Branding</option>
-              <option value="uiux">UI/UX Design</option>
-              <option value="responsive">Responsive Design</option>
-              <option value="crm">CRM Integration</option>
-            </select>
-          </div>
+    <div class="mb-3">
+      <label class="form-label">What Service Do You Need?</label>
+      <select id="service" name="service" class="form-select py-3" required>
+        <option disabled selected>-- Select a Service --</option>
+        <option value="web_design">Static Website</option>
+        <option value="seo">SEO Optimization</option>
+        <option value="marketing">Marketing</option>
+        <option value="branding">Branding</option>
+        <option value="uiux">UI/UX Design</option>
+        <option value="responsive">Responsive Design</option>
+        <option value="crm">CRM Integration</option>
+      </select>
+    </div>
 
-          <div class="mb-3">
-            <label class="form-label">Your Message</label>
-            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message..."
-              required></textarea>
-          </div>
+    <div class="mb-3">
+      <label class="form-label">Your Message</label>
+      <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message..." required></textarea>
+    </div>
 
-          <button type="submit" class="btn btn-info text-white px-4">Send Message</button>
-        </form>
-      </div>
+    <button type="submit" class="btn btn-info text-white px-4">Send Message</button>
+  </form>
+</div>
+
+
 
     </div>
   </div>
 </section>
 
 <!-- JavaScript for Form Submission -->
+
+<!-- JavaScript to send form data -->
 <script>
   document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -228,26 +230,22 @@ Message: Let's collaborate!
       message: document.getElementById('message').value
     };
 
-    fetch('http://localhost:3000/contact', {
+    fetch('https://api.techscaleups.in/contact', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
     })
-      .then(res => res.json())
-      .then(data => {
-        alert('Message sent successfully!');
-        document.getElementById('contactForm').reset();
-      })
-      .catch(err => {
-        console.error(err);
-        alert('Something went wrong. Please try again later.');
-      });
+    .then(res => res.json())
+    .then(data => {
+      alert('Message sent successfully!');
+      document.getElementById('contactForm').reset();
+    })
+    .catch(err => {
+      console.error(err);
+      alert('Something went wrong. Please try again later.');
+    });
   });
 </script>
-
-
 
 
 
