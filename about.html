@@ -916,10 +916,101 @@
 
       <!-- Left Column - SVG Image -->
       <div class="col-md-6 mb-4 mb-md-0">
-        <!-- (SVG REMAINS UNCHANGED) -->
-        <!-- [Paste your full SVG here exactly as it is, no changes needed] -->
-        <!-- For brevity, skipping SVG content here but you can keep it as-is -->
-        [YOUR FULL SVG GOES HERE]
+ <svg width="100%" height="100%" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#1DA1F2" />
+              <stop offset="100%" stop-color="#00C18C" />
+            </linearGradient>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <clipPath id="clipText">
+              <rect x="140" y="155" width="220" height="70" />
+            </clipPath>
+          </defs>
+
+          <style>
+            .envelope {
+              fill: #3498db;
+              stroke: #2980b9;
+              stroke-width: 2;
+              rx: 10;
+            }
+
+            .flap {
+              fill: #2980b9;
+              transform-origin: 250px 200px;
+              animation: flapOpen 5s ease-in-out infinite;
+            }
+
+            .paper {
+              fill: white;
+              stroke: #ccc;
+              stroke-width: 1;
+              animation: slideOut 5.5s ease-in-out infinite;
+            }
+
+            .type-text {
+              font-family: monospace;
+              font-size: 12px;
+              fill: #3498db;
+              animation: typing 3s steps(40, end) 7.5s infinite;
+            }
+
+            .send-button {
+              fill: #27ae60;
+              stroke: #219150;
+              stroke-width: 2;
+              rx: 8;
+              cursor: pointer;
+            }
+
+            .send-text {
+              font-family: 'Montserrat', sans-serif;
+              font-size: 14px;
+              fill: white;
+              text-anchor: middle;
+              dominant-baseline: middle;
+            }
+
+            @keyframes flapOpen {
+              0%, 100% { transform: rotateX(0deg); }
+              50% { transform: rotateX(60deg); }
+            }
+
+            @keyframes slideOut {
+              0%, 100% { transform: translateY(0); }
+              50% { transform: translateY(-50px); }
+            }
+
+            @keyframes typing {
+              0% { opacity: 0; }
+              50% { opacity: 1; }
+              100% { opacity: 0; }
+            }
+          </style>
+
+          <rect x="100" y="200" width="300" height="180" class="envelope" rx="10" />
+          <polygon points="100,200 250,100 400,200" class="flap" />
+          <rect x="130" y="160" width="240" height="120" rx="5" class="paper" />
+          <g clip-path="url(#clipText)">
+            <text x="135" y="175" class="type-text">
+Hi, I’d like to connect with 
+you!
+Email: example@mail.com
+Message: Let's collaborate!
+            </text>
+          </g>
+          <g>
+            <rect x="200" y="320" width="100" height="40" class="send-button" rx="8" />
+            <text x="250" y="342" class="send-text">Send</text>
+          </g>
+        </svg>
       </div>
 
       <!-- Right Column - Contact Form -->
