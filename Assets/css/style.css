@@ -534,3 +534,100 @@ footer h6 {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3); /* optional border */
 }
+.form-control , .form-select{
+  padding: 14px 14px ;
+}
+
+
+
+ /* Modal CSS */
+  #success-toggle {
+    display: none;
+  }
+
+  .success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #success-toggle:checked + .success-modal {
+    display: flex;
+  }
+
+  .success-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 400px;
+    text-align: center;
+    animation: popupFadeIn 0.4s ease;
+  }
+
+  @keyframes popupFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .success-check {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+  }
+
+  .success-check circle {
+    fill: #2ecc71;
+  }
+
+  .success-check path {
+    stroke: white;
+    stroke-width: 6;
+    fill: none;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw 1s forwards;
+    animation-delay: 0.3s;
+  }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+.gradient-btn {
+  background: linear-gradient(90deg, #1DA1F2 0%, #00C18C 100%);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-btn:hover {
+  opacity: 0.9;
+}
+.close-btn {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #1DA1F2 0%, #00C18C 100%);
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
