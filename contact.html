@@ -215,6 +215,7 @@ Message: Let's collaborate!
   </div>
 </section>
 
+<!-- JavaScript for Form Submission -->
 <script>
   document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -227,22 +228,28 @@ Message: Let's collaborate!
       message: document.getElementById('message').value
     };
 
-    fetch('https://api.techscaleups.in/contact', {
+    fetch('http://localhost:3000/contact', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify(formData)
     })
-    .then(res => res.json())
-    .then(data => {
-      alert('Message sent successfully!');
-      document.getElementById('contactForm').reset();
-    })
-    .catch(err => {
-      console.error(err);
-      alert('Something went wrong. Please try again later.');
-    });
+      .then(res => res.json())
+      .then(data => {
+        alert('Message sent successfully!');
+        document.getElementById('contactForm').reset();
+      })
+      .catch(err => {
+        console.error(err);
+        alert('Something went wrong. Please try again later.');
+      });
   });
 </script>
+
+
+
+
 
       
 <script src="index.js"></script>
