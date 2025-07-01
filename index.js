@@ -35,38 +35,44 @@
 
 
 
-  
-  document.getElementById('contactForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
+  // Wait for the DOM to load
+window.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
 
-    const formData = {
-      name: document.getElementById('name').value,
-      phone: document.getElementById('phone').value,
-      email: document.getElementById('email').value,
-      service: document.getElementById('service').value,
-      message: document.getElementById('message').value
-    };
+  if (form) {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
 
-    try {
-      const res = await fetch('https://email.techscaleups.in/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
+      const formData = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        service: document.getElementById('service').value,
+        message: document.getElementById('message').value
+      };
 
-      const data = await res.json();
+      try {
+        const res = await fetch('https://email.techscaleups.in/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
 
-      if (data.success) {
-        alert('✅ Message sent successfully!');
-        document.getElementById('contactForm').reset();
-      } else {
-        alert('❌ Failed: ' + data.message);
+        const data = await res.json();
+
+        if (data.success) {
+          alert('✅ Message sent successfully!');
+          form.reset();
+        } else {
+          alert('❌ Failed: ' + data.message);
+        }
+
+      } catch (err) {
+        console.error('❌ Error:', err);
+        alert('❌ Something went wrong.');
       }
-
-    } catch (err) {
-      console.error(err);
-      alert('❌ Something went wrong.');
-    }
-  });
+    });
+  }
+});
