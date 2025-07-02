@@ -667,7 +667,7 @@ background-size: cover;
   background: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 8px rgba(255, 181, 181, 0.05);
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
   height: 100%;
 }
 
