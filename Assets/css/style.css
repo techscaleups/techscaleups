@@ -651,6 +651,7 @@ background-size: cover;
   width: 100%;
 }
 
+
 .great_types li{
   font-size: 16px; 
   font-family: var(--font-heading);
@@ -666,9 +667,16 @@ background-size: cover;
 .gain-box {
   background: #fff;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 12px !important;
   box-shadow: 0 0 8px rgba(0,0,0,0.05);
   height: 100%;
 }
-
+.gain-box img {
+  height: 80px;         /* Adjust as needed */
+  width: auto;          /* Keeps image aspect ratio */
+  object-fit: contain;  /* Ensures image fits nicely within its box */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
