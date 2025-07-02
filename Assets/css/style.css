@@ -650,7 +650,11 @@ background-size: cover;
   height: 80vh;
   width: 100%;
 }
-
+.seo_banner{
+  
+  height: 80vh;
+  width: 100%;
+}
 
 .great_types li{
   font-size: 16px; 
