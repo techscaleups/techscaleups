@@ -183,6 +183,10 @@ p {
 
 
 }
+h5{
+  font-size: 16px;
+  margin-top: 20px;
+}
 
 .step-text {
   font-size: 24px;
@@ -634,3 +638,37 @@ background-size: cover;
     font-weight: bold;
     cursor: pointer;
   }
+
+
+/* what we do */
+
+.static_banner {
+  background-image: url('/Assets/images/static.png');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 80vh;
+  width: 100%;
+}
+
+.great_types li{
+  font-size: 16px; 
+  font-family: var(--font-heading);
+  color: #333333;
+  font-weight: 400;
+  padding: 8px 0px;
+}
+
+  .what-you-gain h2 {
+  font-size: 2rem;
+}
+
+.gain-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(255, 181, 181, 0.05);
+  height: 100%;
+}
+
+

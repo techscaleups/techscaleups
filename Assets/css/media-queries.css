@@ -20,6 +20,11 @@
 .py-80{
   padding: 20px 20px;
 }
+ .static_banner {
+    height: 40vh; /* Adjust for mobile screens */
+    margin-top: 20px;
+    background-size: contain; /* Or keep cover if you want full fill */
+  }
 }
 
 /* 321px to 375px - Small phones */
@@ -30,7 +35,11 @@
   .py-80{
   padding: 40px 0px;
 }
-
+ .static_banner {
+    height: 50vh; /* Adjust for mobile screens */
+    background-position: center top;
+    background-size: contain; /* Or keep cover if you want full fill */
+  }
   .custom-btn {
     font-size: 14px;
   }
@@ -57,6 +66,11 @@
     .py-100{
   padding: 20px 10px ;
 }
+ .static_banner {
+    height:20vh; /* Adjust for mobile screens */
+  margin-top: 100px;
+    background-size: contain; /* Or keep cover if you want full fill */
+  }
  
 }
 
@@ -89,6 +103,11 @@
       width: 100% !important;
      margin: 16px;
     }
+     .static_banner {
+    height: 40vh; /* Adjust for mobile screens */
+  margin-top: 20px;
+    background-size: contain; /* Or keep cover if you want full fill */
+  }
 }
 
 /* 426px to 480px - Large phones */
