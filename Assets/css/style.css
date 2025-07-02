@@ -655,7 +655,10 @@ background-size: cover;
   height: 60vh;
   width: 100%;
 }
-
+.Marketing_banner{
+    height: 60vh;
+  width: 100%;
+}
 .great_types li{
   font-size: 16px; 
   font-family: var(--font-heading);
