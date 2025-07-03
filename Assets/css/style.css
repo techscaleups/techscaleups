@@ -229,7 +229,12 @@ h5{
   -webkit-text-fill-color: transparent;
   display: inline;
 
-}
+}.gradient-icon {
+    background: linear-gradient(90deg, #1DA1F2 0%, #00C18C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
 
 .client-logo {
   max-height: 60px;
@@ -457,7 +462,9 @@ footer h6 {
   font-size: 18px;
 }
 
-
+h6{
+  font-size: 20px;
+}
 
 /* aboutus */
 
@@ -659,6 +666,10 @@ background-size: cover;
   width: 100%;
 }
 .Marketing_banner{
+    height: 60vh;
+  width: 100%;
+}
+.contact_banner{
     height: 60vh;
   width: 100%;
 }
