@@ -12,6 +12,7 @@
 
   <!-- custem css -->
   <link rel="stylesheet" href="/Assets/css/style.css">
+  <link rel="stylesheet" href="/Assets/css/media-queries.css">
 
   <!-- open sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,26 +35,745 @@
     href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-</head> 
+</head>
 
 <body>
-    
+
   <div id="navbar-placeholder"></div>
 
-<div id="coming-banner-placeholder"></div>
-  
-
-<div id="footer-placeholder"></div>
-
+  <div class="seo_banner">
+    <!-- You can add content here if needed -->
+  </div>
 
 
 
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Column (Text) -->
+        <div class="col-lg-6 col-md-6 col-12 mb-4 mb-md-0">
+          <h2 class="mb-3">Why CRM Integration?</h2>
+          <p>
+        Whether you're handling 10 leads or 10,000, a CRM (Customer Relationship Management) system keeps your pipeline organized, follow-ups consistent, and team collaboration smooth.
+We help you integrate the right CRM for your workflow — so you can focus on growing, not juggling spreadsheets.
 
 
-      
-<script src="index.js"></script>
+          </p>
 
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <h6>Great for</h6>
+<ul class="great_types list-unstyled">
+  <li><i class="bi bi-bar-chart me-2"></i>Startups scaling sales and outreach</li>
+  <li><i class="bi bi-person-lines-fill me-2"></i>Agencies tracking multiple clients</li>
+  <li><i class="bi bi-people me-2"></i>Sales teams needing workflow clarity</li>
+  <li><i class="bi bi-pie-chart me-2"></i>Marketing teams syncing leads & conversions</li>
+</ul>
+
+
+        </div>
+
+        <!-- Right Column (Image) -->
+        <div class="col-lg-6 col-md-6 col-12 text-center">
+          <img src="/Assets/images/crm-solution.png" alt="Static Web Illustration" class="img-fluid" style="max-width: 80%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="py-5 text-center">
+    <div class="container">
+      <!-- Heading -->
+      <h2 class="fw-bold mb-3">What We Deliver</h2>
+      <p class="text-center mb-5">Startup-Ready. Developer-Clean. User-Friendly.</p>
+
+      <!-- Image Boxes -->
+      <div class="row g-5 pb-5">
+        <div class="col-md-2 col-sm-6 col-12">
+          <div class="p-3 border rounded shadow-sm h-100">
+            <svg width="100%" height="100%   " viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
+              <style>
+                .envelope {
+                  fill: #F9E79F;
+                  stroke: #B7950B;
+                  stroke-width: 2;
+                }
+
+                .flap {
+                  fill: #F7DC6F;
+                  transform-origin: center;
+                  animation: flapOpen 2s ease-in-out infinite;
+                }
+
+                @keyframes flapOpen {
+
+                  0%,
+                  100% {
+                    transform: rotateX(0deg);
+                  }
+
+                  50% {
+                    transform: rotateX(180deg);
+                  }
+                }
+
+                .label {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 10px;
+                  font-weight: 600;
+                  fill: #333;
+                  text-anchor: middle;
+                }
+              </style>
+
+              <!-- Envelope -->
+              <rect x="65" y="35" width="60" height="40" class="envelope" />
+              <polygon points="65,35 95,55 125,35" class="flap" />
+
+              <!-- Label -->
+
+            </svg>
+
+
+
+          </div>
+          <h5 class=""> Email Marketing </h5>
+        </div>
+
+        <div class="col-md-2 col-sm-6 col-12">
+          <div class="p-3 border rounded shadow-sm h-100">
+            <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
+              <style>
+                .bubble {
+                  fill: #D6EAF8;
+                  stroke: #3498DB;
+                  stroke-width: 1.5;
+                  rx: 6;
+                }
+
+                .hashtag {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 12px;
+                  font-weight: bold;
+                  fill: #2E86C1;
+                  opacity: 0;
+                  animation: fadeIn 2s ease-in-out infinite;
+                }
+
+                @keyframes fadeIn {
+
+                  0%,
+                  100% {
+                    opacity: 0;
+                    transform: translateY(5px);
+                  }
+
+                  50% {
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+
+                .label {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 10px;
+                  font-weight: 600;
+                  fill: #333;
+                  text-anchor: middle;
+                }
+              </style>
+
+              <!-- Chat Bubble 1 -->
+              <rect x="50" y="30" width="60" height="30" class="bubble" />
+              <text x="80" y="48" text-anchor="middle" font-size="8" font-family="Montserrat" fill="#2980B9">Great
+                Post!</text>
+
+              <!-- Chat Bubble 2 -->
+              <rect x="80" y="60" width="60" height="30" class="bubble" />
+              <text x="110" y="78" text-anchor="middle" font-size="8" font-family="Montserrat" fill="#2980B9">Thanks
+                😊</text>
+
+              <!-- Animated Hashtag -->
+              <text x="95" y="25" class="hashtag">#campaign</text>
+
+
+            </svg>
+
+
+
+
+          </div>
+          <h5 class="">Social Media Campaign </h5>
+        </div>
+        <div class="col-md-2 col-sm-6 col-12">
+          <div class="p-3 border rounded shadow-sm h-100">
+            <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
+              <style>
+                .icon {
+                  font-size: 14px;
+                  animation: pop 2s ease-in-out infinite;
+                }
+
+                .icon2 {
+                  animation-delay: 0.5s;
+                }
+
+                .icon3 {
+                  animation-delay: 1s;
+                }
+
+                @keyframes pop {
+
+                  0%,
+                  100% {
+                    opacity: 0.3;
+                    transform: scale(1);
+                  }
+
+                  50% {
+                    opacity: 1;
+                    transform: scale(1.3);
+                  }
+                }
+
+                .label {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 10px;
+                  font-weight: 600;
+                  fill: #333;
+                  text-anchor: middle;
+                }
+              </style>
+
+              <!-- Icons as emojis for funnel -->
+              <text x="40" y="60" class="icon">📢</text>
+              <text x="80" y="60" class="icon icon2">🖱️</text>
+              <text x="120" y="60" class="icon icon3">👤</text>
+              <text x="160" y="60" class="icon">💰</text>
+
+
+            </svg>
+
+
+          </div>
+          <h5 class="">Ad ➜ Click ➜ Lead ➜ Sale</h5>
+        </div>
+        <div class="col-md-2 col-sm-6 col-12">
+          <div class="p-3 border rounded shadow-sm h-100">
+            <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
+              <style>
+                .magnet {
+                  fill: #F1948A;
+                  stroke: #C0392B;
+                  stroke-width: 1.5;
+                }
+
+                .paper {
+                  fill: #EBF5FB;
+                  stroke: #3498DB;
+                  stroke-width: 1;
+                  rx: 3;
+                  animation: float 3s ease-in-out infinite;
+                }
+
+                .user {
+                  fill: #85C1E9;
+                  animation: pullIn 3s ease-in-out infinite;
+                }
+
+                @keyframes float {
+
+                  0%,
+                  100% {
+                    transform: translateY(0);
+                  }
+
+                  50% {
+                    transform: translateY(-5px);
+                  }
+                }
+
+                @keyframes pullIn {
+
+                  0%,
+                  100% {
+                    transform: translateX(0);
+                    opacity: 0.4;
+                  }
+
+                  50% {
+                    transform: translateX(-8px);
+                    opacity: 1;
+                  }
+                }
+
+                .label {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 10px;
+                  font-weight: 600;
+                  fill: #333;
+                  text-anchor: middle;
+                }
+              </style>
+
+              <!-- Magnet -->
+              <rect x="130" y="40" width="20" height="25" class="magnet" rx="4" />
+              <rect x="140" y="40" width="5" height="25" fill="#FADBD8" />
+
+              <!-- Floating Paper (Lead Magnet) -->
+              <rect x="80" y="40" width="35" height="25" class="paper" />
+
+              <!-- Users Attracted -->
+              <circle cx="40" cy="50" r="6" class="user" />
+              <circle cx="55" cy="60" r="6" class="user" style="animation-delay: 0.4s;" />
+              <circle cx="70" cy="45" r="6" class="user" style="animation-delay: 0.8s;" />
+
+            </svg>
+
+
+
+          </div>
+          <h5 class="">Lead Magnet Design</h5>
+        </div>
+        <div class="col-md-2 col-sm-6 col-12">
+          <div class="p-3 border rounded shadow-sm h-100">
+            <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
+              <style>
+                .chart-bg {
+                  fill: #FDFEFE;
+                  stroke: #D5DBDB;
+                  stroke-width: 1.2;
+                  rx: 6;
+                }
+
+                .line-path {
+                  fill: none;
+                  stroke: #5DADE2;
+                  stroke-width: 2;
+                  stroke-dasharray: 120;
+                  stroke-dashoffset: 120;
+                  animation: draw 2.5s ease-in-out infinite;
+                }
+
+                @keyframes draw {
+                  0% {
+                    stroke-dashoffset: 120;
+                  }
+
+                  50% {
+                    stroke-dashoffset: 0;
+                  }
+
+                  100% {
+                    stroke-dashoffset: 120;
+                  }
+                }
+
+                .label {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 10px;
+                  font-weight: 600;
+                  fill: #333;
+                  text-anchor: middle;
+                }
+              </style>
+
+              <!-- Chart Background -->
+              <rect x="30" y="20" width="130" height="70" class="chart-bg" />
+
+              <!-- Animated Line -->
+              <path d="M40 80 L60 60 L80 70 L100 50 L120 55 L140 40 L150 45" class="line-path" />
+
+            </svg>
+
+
+
+          </div>
+          <h5 class="">Analytics Pulse Chart </h5>
+        </div>
+        <div class="col-md-2 col-sm-6 col-12">
+          <div class="p-3 border rounded shadow-sm h-100">
+            <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
+              <style>
+                .screen {
+                  fill: #FDFEFE;
+                  stroke: #D6DBDF;
+                  stroke-width: 1.2;
+                  rx: 8;
+                }
+
+                .person {
+                  fill: #5DADE2;
+                }
+
+                .wave {
+                  fill: none;
+                  stroke: #48C9B0;
+                  stroke-width: 2;
+                  opacity: 0;
+                  animation: wavePulse 2s ease-out infinite;
+                }
+
+                .wave2 {
+                  animation-delay: 0.5s;
+                }
+
+                .wave3 {
+                  animation-delay: 1s;
+                }
+
+                @keyframes wavePulse {
+                  0% {
+                    r: 0;
+                    opacity: 0.8;
+                  }
+
+                  50% {
+                    r: 20;
+                    opacity: 0.4;
+                  }
+
+                  100% {
+                    r: 40;
+                    opacity: 0;
+                  }
+                }
+
+                .label {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 10px;
+                  font-weight: 600;
+                  fill: #333;
+                  text-anchor: middle;
+                }
+              </style>
+
+              <!-- Laptop Screen -->
+              <rect x="45" y="20" width="100" height="60" class="screen" />
+
+              <!-- Person Head -->
+              <circle cx="95" cy="45" r="10" class="person" />
+              <!-- Body -->
+              <rect x="90" y="55" width="10" height="15" class="person" />
+
+              <!-- Broadcast Waves -->
+              <circle cx="95" cy="45" r="0" class="wave" />
+              <circle cx="95" cy="45" r="0" class="wave wave2" />
+              <circle cx="95" cy="45" r="0" class="wave wave3" />
+
+              <!-- Label -->
+
+            </svg>
+
+
+
+
+          </div>
+          <h5 class="">Influencer Outreach </h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="what-you-gain py-5">
+    <div class="container text-center">
+      <h2 class="mb-2 fw-bold">What You’ll Gain</h2>
+      <p class="text-center mb-5">What You’ll Gain with CRM Integration</p>
+<div class="row g-4">
+  <div class="col-md-3 col-sm-6">
+    <div class="gain-box p-3 text-center bg-white shadow-sm rounded">
+      <img src="/Assets/images/organized.svg" alt="Lead Organization" width="60" class="mb-3">
+      <h6 class="fw-semibold">Organized Pipeline</h6>
+      <p class="text-muted">No more missed follow-ups — every lead is tracked in one place.</p>
+    </div>
+  </div>
+
+  <div class="col-md-3 col-sm-6">
+    <div class="gain-box p-3 text-center bg-white shadow-sm rounded">
+      <img src="/Assets/images/automation.svg" alt="Automation" width="60" class="mb-3">
+      <h6 class="fw-semibold">Smarter Automation</h6>
+      <p class="text-muted">Automate emails, tasks, and reminders to boost team efficiency.</p>
+    </div>
+  </div>
+
+  <div class="col-md-3 col-sm-6">
+    <div class="gain-box p-3 text-center bg-white shadow-sm rounded">
+      <img src="/Assets/images/insights.svg" alt="Analytics" width="60" class="mb-3">
+      <h6 class="fw-semibold">Better Insights</h6>
+      <p class="text-muted">Track leads, conversion rates, and performance in real-time.</p>
+    </div>
+  </div>
+
+  <div class="col-md-3 col-sm-6">
+    <div class="gain-box p-3 text-center bg-white shadow-sm rounded">
+      <img src="/Assets/images/scale.svg" alt="Scale Growth" width="60" class="mb-3">
+      <h6 class="fw-semibold">Scale Growth</h6>
+      <p class="text-muted">Your CRM grows with your business — no more bottlenecks.</p>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+  </section>
+
+
+  <section class="d-flex justify-content-center py-5">
+    <div class="bg-white ready_box shadow rounded-3 text-center p-5 px-md-5">
+      <h2 class="">Ready to get started?</h2>
+      <p class="text-center mb-4">Launch faster. Look sharper. Convert better.</p>
+      <div class="d-flex justify-content-center gap-2">
+        <a href="#" class="btn btn-info py-3">Start CRM Setup with ScaleUp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section py-80 bg-light">
+    <div class="container">
+      <h2 class="text-center">Contact</h2>
+      <p class="mb-5 text-center">Let’s start building something amazing together.</p>
+      <div class="row align-items-center">
+
+        <!-- Left Column - SVG Image -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <svg width="100%" height="100%" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#1DA1F2" />
+                <stop offset="100%" stop-color="#00C18C" />
+              </linearGradient>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                <feMerge>
+                  <feMergeNode in="coloredBlur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+              <clipPath id="clipText">
+                <rect x="140" y="155" width="220" height="70" />
+              </clipPath>
+            </defs>
+
+            <style>
+              .envelope {
+                fill: #3498db;
+                stroke: #2980b9;
+                stroke-width: 2;
+                rx: 10;
+              }
+
+              .flap {
+                fill: #2980b9;
+                transform-origin: 250px 200px;
+                animation: flapOpen 5s ease-in-out infinite;
+              }
+
+              .paper {
+                fill: white;
+                stroke: #ccc;
+                stroke-width: 1;
+                animation: slideOut 5.5s ease-in-out infinite;
+              }
+
+              .type-text {
+                font-family: monospace;
+                font-size: 12px;
+                fill: #3498db;
+                animation: typing 3s steps(40, end) 7.5s infinite;
+              }
+
+              .send-button {
+                fill: #27ae60;
+                stroke: #219150;
+                stroke-width: 2;
+                rx: 8;
+                cursor: pointer;
+              }
+
+              .send-text {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                fill: white;
+                text-anchor: middle;
+                dominant-baseline: middle;
+              }
+
+              @keyframes flapOpen {
+
+                0%,
+                100% {
+                  transform: rotateX(0deg);
+                }
+
+                50% {
+                  transform: rotateX(60deg);
+                }
+              }
+
+              @keyframes slideOut {
+
+                0%,
+                100% {
+                  transform: translateY(0);
+                }
+
+                50% {
+                  transform: translateY(-50px);
+                }
+              }
+
+              @keyframes typing {
+                0% {
+                  opacity: 0;
+                }
+
+                50% {
+                  opacity: 1;
+                }
+
+                100% {
+                  opacity: 0;
+                }
+              }
+            </style>
+
+            <rect x="100" y="200" width="300" height="180" class="envelope" rx="10" />
+            <polygon points="100,200 250,100 400,200" class="flap" />
+            <rect x="130" y="160" width="240" height="120" rx="5" class="paper" />
+            <g clip-path="url(#clipText)">
+              <text x="140" y="175" class="type-text">
+                Hi, I’d like to connect with
+                you!
+                Email: example@mail.com
+                Message: Let's collaborate!
+              </text>
+            </g>
+            <g>
+              <rect x="200" y="320" width="100" height="40" class="send-button" rx="8" />
+              <text x="250" y="342" class="send-text">Send</text>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Right Column - Contact Form -->
+        <div class="col-md-6 col-12 col-lg-6 Column_Form">
+          <h2 class="mb-4">Get in Touch</h2>
+          <form id="contactForm">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input id="name" name="name" type="text" class="form-control " placeholder="Your Name" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input id="phone" name="phone" type="tel" class="form-control " placeholder="+91 9876543210" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input id="email" name="email" type="email" class="form-control " placeholder="name@example.com" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">What Service Do You Need?</label>
+              <select id="service" name="service" class="form-select " required>
+                <option disabled selected>-- Select a Service --</option>
+                <option>Static Website</option>
+                <option>SEO Optimization</option>
+                <option>Marketing</option>
+                <option>Branding</option>
+                <option>UI/UX Design</option>
+                <option>Responsive Design</option>
+                <option>CRM Integration</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Your Message</label>
+              <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message..."
+                required></textarea>
+            </div>
+
+            <div class="row">
+              <div class="col text-end">
+                <button type="submit" class="btn gradient-btn text-white px-4">Send Message</button>
+
+              </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <!-- ✅ JavaScript to trigger modal -->
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const formData = {
+          name: document.getElementById('name').value,
+          phone: document.getElementById('phone').value,
+          email: document.getElementById('email').value,
+          service: document.getElementById('service').value,
+          message: document.getElementById('message').value
+        };
+
+        try {
+          const res = await fetch('https://email.techscaleups.in/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+          });
+
+          const data = await res.json();
+
+          if (data.success) {
+            document.getElementById('contactForm').reset();
+            document.getElementById('success-toggle').checked = true; // Show modal
+          } else {
+            alert('❌ Failed: ' + data.message);
+          }
+
+        } catch (err) {
+          console.error(err);
+          alert('❌ Something went wrong.');
+        }
+      });
+    </script>
+
+  </section>
+
+  <!-- ✅ Modal Trigger Hidden Checkbox -->
+  <input type="checkbox" id="success-toggle" />
+
+  <!-- ✅ Modal HTML -->
+  <div class="success-modal">
+    <div class="success-content">
+      <svg class="success-check" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" />
+        <path d="M30  fifty L45 65 L70 35" />
+      </svg>
+      <h4>Message Sent Successfully!</h4>
+      <p>We'll get back to you soon.</p>
+      <label for="success-toggle" class="close-btn">Close</label>
+    </div>
+  </div>
+
+  <!-- ✅ Your Contact Section -->
+
+
+  <div id="footer-placeholder"></div>
+
+
+
+
+
+
+
+  <script src="index.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -52,28 +52,25 @@
       <div class="row align-items-center">
         <!-- Left Column (Text) -->
         <div class="col-lg-6 col-md-6 col-12 mb-4 mb-md-0">
-          <h2 class="mb-3">Why UI/UX Design Matters ?</h2>
+          <h2 class="mb-3">Why Responsive Design ?</h2>
           <p>
-            A great product isn't just functional — it’s intuitive, accessible, and feels good to use. That’s where
-            UI/UX design makes all the difference. Whether it's a landing page, dashboard, or mobile app, we create
-            frictionless experiences that turn users into loyal customers.
+          Over 70% of web traffic comes from mobile. If your site isn’t mobile-friendly, you're losing users before they even scroll. Responsive design ensures your brand looks clean, fast, and functional — whether someone visits from a phone, tablet, or desktop.
           </p>
 
           <h6>Great for</h6>
           <ul class="great_types list-unstyled">
-            <li><i class="bi bi-phone me-2"></i>Mobile-first startups</li>
-            <li><i class="bi bi-window me-2"></i>SaaS platforms & dashboards</li>
-            <li><i class="bi bi-kanban me-2"></i>Agencies needing white-label UI kits</li>
-            <li><i class="bi bi-layers me-2"></i>Founders building MVPs</li>
+            <li><i class="bi bi-phone me-2"></i>Startups targeting mobile-first users</li>
+            <li><i class="bi bi-display me-2"></i>Businesses needing consistent desktop + tablet views</li>
+            <li><i class="bi bi-search me-2"></i>SEO-focused landing pages</li>
+            <li><i class="bi bi-cart4 me-2"></i>Ecommerce sites on phones and apps</li>
           </ul>
-
 
 
         </div>
 
         <!-- Right Column (Image) -->
         <div class="col-lg-6 col-md-6 col-12 text-center">
-          <img src="/Assets/images/ux.png" alt="Static Web Illustration" class="img-fluid" style="max-width: 80%;">
+          <img src="/Assets/images/responsive-website.png" alt="Static Web Illustration" class="img-fluid" style="max-width: 80%;">
         </div>
       </div>
     </div>
@@ -91,17 +88,30 @@
       <div class="row g-5 pb-5">
         <div class="col-md-2 col-sm-6 col-12">
           <div class="p-3 border rounded shadow-sm h-100">
-            <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
+            <svg width="100%" height="100%   " viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
               <style>
-                .frame {
-                  fill: #ECF0F1;
-                  stroke: #BDC3C7;
-                  stroke-width: 1.5;
+                .envelope {
+                  fill: #F9E79F;
+                  stroke: #B7950B;
+                  stroke-width: 2;
                 }
 
-                .box {
-                  fill: #3498DB;
-                  animation: pulse 2s ease-in-out infinite;
+                .flap {
+                  fill: #F7DC6F;
+                  transform-origin: center;
+                  animation: flapOpen 2s ease-in-out infinite;
+                }
+
+                @keyframes flapOpen {
+
+                  0%,
+                  100% {
+                    transform: rotateX(0deg);
+                  }
+
+                  50% {
+                    transform: rotateX(180deg);
+                  }
                 }
 
                 .label {
@@ -111,60 +121,164 @@
                   fill: #333;
                   text-anchor: middle;
                 }
-
-                @keyframes pulse {
-
-                  0%,
-                  100% {
-                    opacity: 1;
-                  }
-
-                  50% {
-                    opacity: 0.6;
-                  }
-                }
               </style>
 
-              <!-- Wireframe Panel -->
-              <rect x="30" y="20" width="130" height="70" class="frame" rx="6" />
+              <!-- Envelope -->
+              <rect x="65" y="35" width="60" height="40" class="envelope" />
+              <polygon points="65,35 95,55 125,35" class="flap" />
 
-              <!-- Wireframe Sections -->
-              <rect x="40" y="30" width="40" height="10" class="box" rx="2" />
-              <rect x="90" y="30" width="30" height="10" class="box" rx="2" style="animation-delay: 0.3s;" />
-              <rect x="40" y="50" width="80" height="10" class="box" rx="2" style="animation-delay: 0.6s;" />
-
+              <!-- Label -->
 
             </svg>
 
 
 
           </div>
-          <h5 class="">User-Centered Wireframes</h5>
+          <h5 class=""> Email Marketing </h5>
         </div>
 
         <div class="col-md-2 col-sm-6 col-12">
           <div class="p-3 border rounded shadow-sm h-100">
             <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
               <style>
-                .ui-card {
-                  fill: #FDFEFE;
-                  stroke: #D5D8DC;
-                  stroke-width: 1.2;
+                .bubble {
+                  fill: #D6EAF8;
+                  stroke: #3498DB;
+                  stroke-width: 1.5;
                   rx: 6;
                 }
 
+                .hashtag {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 12px;
+                  font-weight: bold;
+                  fill: #2E86C1;
+                  opacity: 0;
+                  animation: fadeIn 2s ease-in-out infinite;
+                }
+
+                @keyframes fadeIn {
+
+                  0%,
+                  100% {
+                    opacity: 0;
+                    transform: translateY(5px);
+                  }
+
+                  50% {
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+
+                .label {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 10px;
+                  font-weight: 600;
+                  fill: #333;
+                  text-anchor: middle;
+                }
+              </style>
+
+              <!-- Chat Bubble 1 -->
+              <rect x="50" y="30" width="60" height="30" class="bubble" />
+              <text x="80" y="48" text-anchor="middle" font-size="8" font-family="Montserrat" fill="#2980B9">Great
+                Post!</text>
+
+              <!-- Chat Bubble 2 -->
+              <rect x="80" y="60" width="60" height="30" class="bubble" />
+              <text x="110" y="78" text-anchor="middle" font-size="8" font-family="Montserrat" fill="#2980B9">Thanks
+                😊</text>
+
+              <!-- Animated Hashtag -->
+              <text x="95" y="25" class="hashtag">#campaign</text>
+
+
+            </svg>
+
+
+
+
+          </div>
+          <h5 class="">Social Media Campaign </h5>
+        </div>
+        <div class="col-md-2 col-sm-6 col-12">
+          <div class="p-3 border rounded shadow-sm h-100">
+            <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
+              <style>
                 .icon {
-                  fill: #5DADE2;
-                  animation: bounce 1.5s infinite ease-in-out;
-                  transform-origin: center;
+                  font-size: 14px;
+                  animation: pop 2s ease-in-out infinite;
                 }
 
-                .text-block {
-                  fill: #AAB7B8;
-                  rx: 2;
+                .icon2 {
+                  animation-delay: 0.5s;
                 }
 
-                @keyframes bounce {
+                .icon3 {
+                  animation-delay: 1s;
+                }
+
+                @keyframes pop {
+
+                  0%,
+                  100% {
+                    opacity: 0.3;
+                    transform: scale(1);
+                  }
+
+                  50% {
+                    opacity: 1;
+                    transform: scale(1.3);
+                  }
+                }
+
+                .label {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 10px;
+                  font-weight: 600;
+                  fill: #333;
+                  text-anchor: middle;
+                }
+              </style>
+
+              <!-- Icons as emojis for funnel -->
+              <text x="40" y="60" class="icon">📢</text>
+              <text x="80" y="60" class="icon icon2">🖱️</text>
+              <text x="120" y="60" class="icon icon3">👤</text>
+              <text x="160" y="60" class="icon">💰</text>
+
+
+            </svg>
+
+
+          </div>
+          <h5 class="">Ad ➜ Click ➜ Lead ➜ Sale</h5>
+        </div>
+        <div class="col-md-2 col-sm-6 col-12">
+          <div class="p-3 border rounded shadow-sm h-100">
+            <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
+              <style>
+                .magnet {
+                  fill: #F1948A;
+                  stroke: #C0392B;
+                  stroke-width: 1.5;
+                }
+
+                .paper {
+                  fill: #EBF5FB;
+                  stroke: #3498DB;
+                  stroke-width: 1;
+                  rx: 3;
+                  animation: float 3s ease-in-out infinite;
+                }
+
+                .user {
+                  fill: #85C1E9;
+                  animation: pullIn 3s ease-in-out infinite;
+                }
+
+                @keyframes float {
 
                   0%,
                   100% {
@@ -172,7 +286,21 @@
                   }
 
                   50% {
-                    transform: translateY(-3px);
+                    transform: translateY(-5px);
+                  }
+                }
+
+                @keyframes pullIn {
+
+                  0%,
+                  100% {
+                    transform: translateX(0);
+                    opacity: 0.4;
+                  }
+
+                  50% {
+                    transform: translateX(-8px);
+                    opacity: 1;
                   }
                 }
 
@@ -185,119 +313,56 @@
                 }
               </style>
 
-              <!-- UI Card -->
-              <rect x="30" y="20" width="130" height="70" class="ui-card" />
+              <!-- Magnet -->
+              <rect x="130" y="40" width="20" height="25" class="magnet" rx="4" />
+              <rect x="140" y="40" width="5" height="25" fill="#FADBD8" />
 
-              <!-- Icon -->
-              <circle cx="50" cy="40" r="8" class="icon" />
+              <!-- Floating Paper (Lead Magnet) -->
+              <rect x="80" y="40" width="35" height="25" class="paper" />
 
-              <!-- Text Blocks -->
-              <rect x="65" y="35" width="60" height="8" class="text-block" />
-              <rect x="65" y="48" width="40" height="6" class="text-block" />
-
+              <!-- Users Attracted -->
+              <circle cx="40" cy="50" r="6" class="user" />
+              <circle cx="55" cy="60" r="6" class="user" style="animation-delay: 0.4s;" />
+              <circle cx="70" cy="45" r="6" class="user" style="animation-delay: 0.8s;" />
 
             </svg>
 
 
 
-
-
           </div>
-          <h5 class="">Modern UI Design </h5>
+          <h5 class="">Lead Magnet Design</h5>
         </div>
         <div class="col-md-2 col-sm-6 col-12">
           <div class="p-3 border rounded shadow-sm h-100">
-
             <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
               <style>
-                .node {
-                  fill: #D6EAF8;
-                  stroke: #5DADE2;
-                  stroke-width: 1.5;
-                  rx: 6;
-                  animation: flash 3s infinite ease-in-out;
-                }
-
-                .line {
-                  stroke: #2980B9;
+                .chart-bg {
+                  fill: #FDFEFE;
+                  stroke: #D5DBDB;
                   stroke-width: 1.2;
-                  stroke-dasharray: 5, 3;
-                  animation: dashmove 2s linear infinite;
+                  rx: 6;
                 }
 
-                .label {
-                  font-family: 'Montserrat', sans-serif;
-                  font-size: 10px;
-                  font-weight: 600;
-                  fill: #333;
-                  text-anchor: middle;
+                .line-path {
+                  fill: none;
+                  stroke: #5DADE2;
+                  stroke-width: 2;
+                  stroke-dasharray: 120;
+                  stroke-dashoffset: 120;
+                  animation: draw 2.5s ease-in-out infinite;
                 }
 
-                @keyframes flash {
-
-                  0%,
-                  100% {
-                    opacity: 1;
+                @keyframes draw {
+                  0% {
+                    stroke-dashoffset: 120;
                   }
 
                   50% {
-                    opacity: 0.5;
-                  }
-                }
-
-                @keyframes dashmove {
-                  0% {
                     stroke-dashoffset: 0;
                   }
 
                   100% {
-                    stroke-dashoffset: -20;
-                  }
-                }
-              </style>
-
-              <!-- Nodes -->
-              <rect x="50" y="30" width="30" height="20" class="node" />
-              <rect x="110" y="30" width="30" height="20" class="node" />
-              <rect x="80" y="65" width="30" height="20" class="node" />
-
-              <!-- Arrows/Lines -->
-              <line x1="80" y1="40" x2="110" y2="40" class="line" />
-              <line x1="65" y1="50" x2="95" y2="65" class="line" />
-              <line x1="125" y1="50" x2="95" y2="65" class="line" />
-
-              >
-            </svg>
-
-
-          </div>
-          <h5 class="">Prototyping in Figma</h5>
-        </div>
-        <div class="col-md-2 col-sm-6 col-12">
-          <div class="p-3 border rounded shadow-sm h-100">
-            <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
-              <style>
-                .device {
-                  fill: #FDFEFE;
-                  stroke: #D5D8DC;
-                  stroke-width: 1.4;
-                  rx: 6;
-                }
-
-                .screen {
-                  fill: #AED6F1;
-                  animation: flicker 2s infinite ease-in-out;
-                }
-
-                @keyframes flicker {
-
-                  0%,
-                  100% {
-                    opacity: 1;
-                  }
-
-                  50% {
-                    opacity: 0.7;
+                    stroke-dashoffset: 120;
                   }
                 }
 
@@ -310,145 +375,98 @@
                 }
               </style>
 
-              <!-- Desktop -->
-              <rect x="30" y="20" width="60" height="45" class="device" />
-              <rect x="34" y="24" width="52" height="37" class="screen" />
+              <!-- Chart Background -->
+              <rect x="30" y="20" width="130" height="70" class="chart-bg" />
 
-              <!-- Tablet -->
-              <rect x="100" y="25" width="25" height="38" class="device" />
-              <rect x="103" y="28" width="19" height="32" class="screen" />
+              <!-- Animated Line -->
+              <path d="M40 80 L60 60 L80 70 L100 50 L120 55 L140 40 L150 45" class="line-path" />
 
-              <!-- Mobile -->
-              <rect x="135" y="30" width="16" height="30" class="device" />
-              <rect x="137" y="32" width="12" height="26" class="screen" />
+            </svg>
+
+
+
+          </div>
+          <h5 class="">Analytics Pulse Chart </h5>
+        </div>
+        <div class="col-md-2 col-sm-6 col-12">
+          <div class="p-3 border rounded shadow-sm h-100">
+            <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
+              <style>
+                .screen {
+                  fill: #FDFEFE;
+                  stroke: #D6DBDF;
+                  stroke-width: 1.2;
+                  rx: 8;
+                }
+
+                .person {
+                  fill: #5DADE2;
+                }
+
+                .wave {
+                  fill: none;
+                  stroke: #48C9B0;
+                  stroke-width: 2;
+                  opacity: 0;
+                  animation: wavePulse 2s ease-out infinite;
+                }
+
+                .wave2 {
+                  animation-delay: 0.5s;
+                }
+
+                .wave3 {
+                  animation-delay: 1s;
+                }
+
+                @keyframes wavePulse {
+                  0% {
+                    r: 0;
+                    opacity: 0.8;
+                  }
+
+                  50% {
+                    r: 20;
+                    opacity: 0.4;
+                  }
+
+                  100% {
+                    r: 40;
+                    opacity: 0;
+                  }
+                }
+
+                .label {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 10px;
+                  font-weight: 600;
+                  fill: #333;
+                  text-anchor: middle;
+                }
+              </style>
+
+              <!-- Laptop Screen -->
+              <rect x="45" y="20" width="100" height="60" class="screen" />
+
+              <!-- Person Head -->
+              <circle cx="95" cy="45" r="10" class="person" />
+              <!-- Body -->
+              <rect x="90" y="55" width="10" height="15" class="person" />
+
+              <!-- Broadcast Waves -->
+              <circle cx="95" cy="45" r="0" class="wave" />
+              <circle cx="95" cy="45" r="0" class="wave wave2" />
+              <circle cx="95" cy="45" r="0" class="wave wave3" />
 
               <!-- Label -->
-              <text x="95" y="105" class="label">Responsive Design</text>
+
             </svg>
 
 
 
 
           </div>
-          <h5 class="">Responsive Design</h5>
-        </div>
-        <div class="col-md-2 col-sm-6 col-12">
-          <div class="p-3 border rounded shadow-sm h-100">
-           <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .circle {
-      fill: #D5F5E3;
-      stroke: #27AE60;
-      stroke-width: 2;
-      animation: pulse 2s infinite ease-in-out;
-    }
-
-    .eye {
-      fill: #1ABC9C;
-      stroke: #148F77;
-      stroke-width: 1.5;
-    }
-
-    .pupil {
-      fill: #154360;
-      animation: blink 4s infinite;
-    }
-
-    .label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      fill: #333;
-      text-anchor: middle;
-    }
-
-    @keyframes pulse {
-      0%, 100% { r: 30; opacity: 1; }
-      50% { r: 33; opacity: 0.7; }
-    }
-
-    @keyframes blink {
-      0%, 90%, 100% { r: 4; }
-      95% { r: 0; }
-    }
-  </style>
-
-  <!-- Circle background -->
-  <circle cx="95" cy="50" r="30" class="circle" />
-
-  <!-- Eye shape -->
-  <ellipse cx="95" cy="50" rx="18" ry="10" class="eye" />
-
-  <!-- Pupil -->
-  <circle cx="95" cy="50" r="4" class="pupil" />
-
-
-</svg>
-
-
-
-
-          </div>
-          <h5 class="">Accessibility First </h5>
-        </div>
-        <div class="col-md-2 col-sm-6 col-12">
-          <div class="p-3 border rounded shadow-sm h-100">
-          <svg width="100%" height="100%" viewBox="0 0 190 113" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .frame {
-      fill: #FDFEFE;
-      stroke: #BDC3C7;
-      stroke-width: 1.2;
-      rx: 6;
-    }
-
-    .dot {
-      fill: #48C9B0;
-      r: 4;
-      animation: blink 2s infinite ease-in-out;
-    }
-
-    .dot2 {
-      animation-delay: 0.5s;
-    }
-
-    .dot3 {
-      animation-delay: 1s;
-    }
-
-    .label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      fill: #333;
-      text-anchor: middle;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 0.2; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.3); }
-    }
-  </style>
-
-  <!-- Workflow Frames -->
-  <rect x="30" y="30" width="30" height="30" class="frame" />
-  <rect x="80" y="30" width="30" height="30" class="frame" />
-  <rect x="130" y="30" width="30" height="30" class="frame" />
-
-  <!-- Connecting Dots -->
-  <circle cx="65" cy="45" class="dot" />
-  <circle cx="115" cy="45" class="dot dot2" />
-  <circle cx="95" cy="75" class="dot dot3" />
-
-
-</svg>
-
-
-
-
-
-          </div>
-          <h5 class="">Prototyping Workflow </h5>
+          <h5 class="">Influencer Outreach </h5>
         </div>
       </div>
     </div>
@@ -457,41 +475,41 @@
   <section class="what-you-gain py-5">
     <div class="container text-center">
       <h2 class="mb-2 fw-bold">What You’ll Gain</h2>
-      <p class="text-center mb-5">What You’ll Gain from Great Design</p>
+      <p class="text-center mb-5">What You’ll Gain with Responsive Design</p>
+<div class="row g-4">
+  <div class="col-md-3 col-sm-6">
+    <div class="gain-box p-3 text-center bg-white shadow-sm rounded">
+      <img src="/Assets/images/mobile-ready.svg" alt="Mobile Ready" width="60" class="mb-3">
+      <h6 class="fw-semibold">Mobile-First Experience</h6>
+      <p class="text-muted">Deliver clean, fast, and usable designs on any phone or tablet.</p>
+    </div>
+  </div>
 
-      <div class="row g-4">
-        <div class="col-md-3 col-sm-6">
-          <div class="gain-box p-3 text-center bg-white shadow-sm rounded">
-            <img src="/Assets/images/Intuitivty-Design.svg" alt="Intuitive Design" width="60" class="mb-3">
-            <h6 class="fw-semibold">Intuitive Design</h6>
-            <p class="text-muted">Interfaces users instantly understand and enjoy using.</p>
-          </div>
-        </div>
+  <div class="col-md-3 col-sm-6">
+    <div class="gain-box p-3 text-center bg-white shadow-sm rounded">
+      <img src="/Assets/images/user-retention.svg" alt="User Retention" width="60" class="mb-3">
+      <h6 class="fw-semibold">Higher Retention</h6>
+      <p class="text-muted">Users stay longer when layouts feel intuitive and easy.</p>
+    </div>
+  </div>
 
-        <div class="col-md-3 col-sm-6">
-          <div class="gain-box p-3 text-center bg-white shadow-sm rounded">
-            <img src="/Assets/images/conversions.svg" alt="Higher Conversions" width="60" class="mb-3">
-            <h6 class="fw-semibold">Higher Conversions</h6>
-            <p class="text-muted">Smart layouts and CTAs that drive user action.</p>
-          </div>
-        </div>
+  <div class="col-md-3 col-sm-6">
+    <div class="gain-box p-3 text-center bg-white shadow-sm rounded">
+      <img src="/Assets/images/rank.svg" alt="SEO Ranking" width="60" class="mb-3">
+      <h6 class="fw-semibold">Better Google Rankings</h6>
+      <p class="text-muted">Mobile-friendly websites rank higher and load faster.</p>
+    </div>
+  </div>
 
-        <div class="col-md-3 col-sm-6">
-          <div class="gain-box p-3 text-center bg-white shadow-sm rounded">
-            <img src="/Assets/images/User-Retention.svg" alt="User Retention" width="60" class="mb-3">
-            <h6 class="fw-semibold">User Retention</h6>
-            <p class="text-muted">Keep users coming back with a seamless experience.</p>
-          </div>
-        </div>
+  <div class="col-md-3 col-sm-6">
+    <div class="gain-box p-3 text-center bg-white shadow-sm rounded">
+      <img src="/Assets/images/no-bounce.svg" alt="Low Bounce" width="60" class="mb-3">
+      <h6 class="fw-semibold">Lower Bounce Rate</h6>
+      <p class="text-muted">Visitors stay, scroll, and convert — instead of leaving early.</p>
+    </div>
+  </div>
+</div>
 
-        <div class="col-md-3 col-sm-6">
-          <div class="gain-box p-3 text-center bg-white shadow-sm rounded">
-            <img src="/Assets/images/Faster-Development.svg" alt="Faster Dev" width="60" class="mb-3">
-            <h6 class="fw-semibold">Faster Development</h6>
-            <p class="text-muted">Clean handoffs and dev-ready Figma files save time.</p>
-          </div>
-        </div>
-      </div>
 
     </div>
   </section>
@@ -502,7 +520,7 @@
       <h2 class="">Ready to get started?</h2>
       <p class="text-center mb-4">Launch faster. Look sharper. Convert better.</p>
       <div class="d-flex justify-content-center gap-2">
-        <a href="#" class="btn btn-info py-3">Get Your Custom UI/UX Design</a>
+        <a href="#" class="btn btn-info py-3">Get a Responsive Redesign</a>
       </div>
     </div>
   </section>
