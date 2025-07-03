@@ -29,6 +29,10 @@
   .contact_{
     width: 100%;
   }
+  .btn-info{
+    font-size: 16px;
+ 
+  }
 }
 
 /* 321px to 375px - Small phones */
