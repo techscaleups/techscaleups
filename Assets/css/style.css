@@ -4,8 +4,9 @@
 
 
 }
-body{
-  overflow-x: hidden;
+
+.hidden_overlay{
+  overflow-y: hidden;
 }
 :root {
   /* Typography */
