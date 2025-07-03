@@ -40,8 +40,328 @@
     
   <div id="navbar-placeholder"></div>
 
-<div id="coming-banner-placeholder"></div>
-  
+<section class="py-5 solutions_banners d-flex align-items-center">
+        <div class="container text-center d-flex flex-column justify-content-center align-items-center">
+            <h1 class="fw-bold display-5 mb-3">Frequently Asked Questions</h1>
+            <p class="text-center">
+                Got questions about our services, pricing, or process? Here are the answers you need.
+            </p>
+        </div>
+    </section>
+
+<!-- FAQ Accordion Section -->
+<section class="py-100 bg-white">
+  <div class="container">
+    <h2 class="text-center pb-5">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+
+      <!-- FAQ 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+            What services does TechScaleUps offer?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            We provide static website development, SEO optimization, UI/UX design, CRM integration, branding, marketing services, and responsive design.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+            How long does it take to build a website?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            A basic website takes 5–7 working days. Complex features like booking systems or ERP integrations may take 2–4 weeks based on requirements.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+            Do you offer SEO services?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes. We follow best practices in on-page SEO, site speed optimization, and keyword targeting to help improve your Google rankings.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+            What platforms do you use for deployment?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+           We deploy both static and dynamic (Node.js) websites on Hostinger, using a CI/CD pipeline for seamless updates and stability. Our setup supports server-side technologies like Node.js, ensuring your backend apps run smoothly with optimized performance and zero-downtime deployments.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+            Can I request custom features for my site?
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Absolutely. We tailor each project based on your business needs, including dynamic forms, dashboards, booking engines, and integrations.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section class="contact-section py-80 bg-light">
+      <div class="container">
+        <h2 class="text-center">Contact</h2>
+        <p class="mb-5 text-center">Let’s start building something amazing together.</p>
+        <div class="row align-items-center">
+
+          <!-- Left Column - SVG Image -->
+          <div class="col-md-6 mb-4 mb-md-0">
+            <svg width="100%" height="100%" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#1DA1F2" />
+                  <stop offset="100%" stop-color="#00C18C" />
+                </linearGradient>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+                <clipPath id="clipText">
+                  <rect x="140" y="155" width="220" height="70" />
+                </clipPath>
+              </defs>
+
+              <style>
+                .envelope {
+                  fill: #3498db;
+                  stroke: #2980b9;
+                  stroke-width: 2;
+                  rx: 10;
+                }
+
+                .flap {
+                  fill: #2980b9;
+                  transform-origin: 250px 200px;
+                  animation: flapOpen 5s ease-in-out infinite;
+                }
+
+                .paper {
+                  fill: white;
+                  stroke: #ccc;
+                  stroke-width: 1;
+                  animation: slideOut 5.5s ease-in-out infinite;
+                }
+
+                .type-text {
+                  font-family: monospace;
+                  font-size: 12px;
+                  fill: #3498db;
+                  animation: typing 3s steps(40, end) 7.5s infinite;
+                }
+
+                .send-button {
+                  fill: #27ae60;
+                  stroke: #219150;
+                  stroke-width: 2;
+                  rx: 8;
+                  cursor: pointer;
+                }
+
+                .send-text {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 14px;
+                  fill: white;
+                  text-anchor: middle;
+                  dominant-baseline: middle;
+                }
+
+                @keyframes flapOpen {
+
+                  0%,
+                  100% {
+                    transform: rotateX(0deg);
+                  }
+
+                  50% {
+                    transform: rotateX(60deg);
+                  }
+                }
+
+                @keyframes slideOut {
+
+                  0%,
+                  100% {
+                    transform: translateY(0);
+                  }
+
+                  50% {
+                    transform: translateY(-50px);
+                  }
+                }
+
+                @keyframes typing {
+                  0% {
+                    opacity: 0;
+                  }
+
+                  50% {
+                    opacity: 1;
+                  }
+
+                  100% {
+                    opacity: 0;
+                  }
+                }
+              </style>
+
+              <rect x="100" y="200" width="300" height="180" class="envelope" rx="10" />
+              <polygon points="100,200 250,100 400,200" class="flap" />
+              <rect x="130" y="160" width="240" height="120" rx="5" class="paper" />
+              <g clip-path="url(#clipText)">
+                <text x="140" y="175" class="type-text">
+                  Hi, I’d like to connect with
+                  you!
+                  Email: example@mail.com
+                  Message: Let's collaborate!
+                </text>
+              </g>
+              <g>
+                <rect x="200" y="320" width="100" height="40" class="send-button" rx="8" />
+                <text x="250" y="342" class="send-text">Send</text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Right Column - Contact Form -->
+          <div class="col-md-6 col-12 col-lg-6 Column_Form" id="Column_Form">
+            <h2 class="mb-4">Get in Touch</h2>
+            <form id="contactForm">
+              <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input id="name" name="name" type="text" class="form-control " placeholder="Your Name" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input id="phone" name="phone" type="tel" class="form-control " placeholder="+91 9876543210" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input id="email" name="email" type="email" class="form-control " placeholder="name@example.com"
+                  required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">What Service Do You Need?</label>
+                <select id="service" name="service" class="form-select " required>
+                  <option disabled selected>-- Select a Service --</option>
+                  <option>Static Website</option>
+                  <option>SEO Optimization</option>
+                  <option>Marketing</option>
+                  <option>Branding</option>
+                  <option>UI/UX Design</option>
+                  <option>Responsive Design</option>
+                  <option>CRM Integration</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Your Message</label>
+                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Write your message..."
+                  required></textarea>
+              </div>
+
+              <div class="row">
+                <div class="col text-end">
+                  <button type="submit" class="btn gradient-btn text-white px-4">Send Message</button>
+
+                </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+      <!-- ✅ JavaScript to trigger modal -->
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+          e.preventDefault();
+
+          const formData = {
+            name: document.getElementById('name').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            service: document.getElementById('service').value,
+            message: document.getElementById('message').value
+          };
+
+          try {
+            const res = await fetch('https://email.techscaleups.in/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(formData)
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+              document.getElementById('contactForm').reset();
+              document.getElementById('success-toggle').checked = true; // Show modal
+            } else {
+              alert('❌ Failed: ' + data.message);
+            }
+
+          } catch (err) {
+            console.error(err);
+            alert('❌ Something went wrong.');
+          }
+        });
+      </script>
+
+    </section>
+
+    <!-- ✅ Modal Trigger Hidden Checkbox -->
+    <input type="checkbox" id="success-toggle" />
+
+    <!-- ✅ Modal HTML -->
+    <div class="success-modal">
+      <div class="success-content">
+        <svg class="success-check" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="40" />
+          <path d="M30  fifty L45 65 L70 35" />
+        </svg>
+        <h4>Message Sent Successfully!</h4>
+        <p>We'll get back to you soon.</p>
+        <label for="success-toggle" class="close-btn">Close</label>
+      </div>
+    </div>
+
+    <!-- ✅ Your Contact Section -->
 
 <div id="footer-placeholder"></div>
 
