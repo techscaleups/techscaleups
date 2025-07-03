@@ -24,6 +24,10 @@
     height: 40vh; /* Adjust for mobile screens */
     margin-top: 20px;
     background-size: contain; /* Or keep cover if you want full fill */
+ }
+   
+  .contact_{
+    width: 100%;
   }
 }
 
@@ -71,6 +75,9 @@
   margin-top: 100px;
     background-size: contain; /* Or keep cover if you want full fill */
   }
+    .contact_{
+    width: 100%;
+  }
  
 }
 
@@ -108,6 +115,9 @@
   margin-top: 20px;
     background-size: contain; /* Or keep cover if you want full fill */
   }
+    .contact_{
+    width: 100%;
+  }
 }
 
 /* 426px to 480px - Large phones */
@@ -142,4 +152,7 @@
       width: 100% !important;
      margin: 16px;
     }
+      .contact_{
+    width: 100%;
+  }
 }

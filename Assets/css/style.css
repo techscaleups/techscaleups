@@ -1,8 +1,11 @@
 * {
   margin: 0px;
-  padding: 0px;
 
 
+
+}
+body{
+    padding-top: 80px;
 }
 
 .hidden_overlay{
@@ -640,7 +643,8 @@ background-size: cover;
 }
 .close-btn {
     margin-top: 20px;
-    background: linear-gradient(90deg, #1DA1F2 0%, #00C18C 100%);
+
+    
     color: white;
     padding: 8px 20px;
     border: none;
@@ -651,28 +655,30 @@ background-size: cover;
 
 
 /* what we do */
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-.static_banner {
-  background-image: url('/Assets/images/static.png');
+.solutions_banners {
+    background: linear-gradient(90deg, #1DA1F2 0%, #00C18C 100%);
   background-repeat: no-repeat;
   background-position: center;
+ color: #fafafa;
+  min-height: 60vh;
+  min-width: 100%;
+}
 
-  height: 80vh;
-  width: 100%;
+.solutions_banners p{
+  color: #fafafa;
 }
-.seo_banner{
-  
-  height: 60vh;
-  width: 100%;
-}
-.Marketing_banner{
-    height: 60vh;
-  width: 100%;
-}
-.contact_banner{
-    height: 60vh;
-  width: 100%;
-}
+
+
 .great_types li{
   font-size: 16px; 
   font-family: var(--font-heading);
@@ -699,5 +705,9 @@ background-size: cover;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.contact_{
+width: 75% ;
 }
 
