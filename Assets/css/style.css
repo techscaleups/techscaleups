@@ -6,7 +6,7 @@
 }
 
 .hidden_overlay{
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 :root {
   /* Typography */
