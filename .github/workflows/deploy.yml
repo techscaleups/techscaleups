@@ -3,7 +3,7 @@ name: 🚀 Auto Deploy to VPS
 on:
   push:
     branches:
-      - main  # or 'master'
+      - main  # change to your branch if not 'main'
 
 jobs:
   deploy:
@@ -18,7 +18,7 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
-    - name: 🚀 Deploy
+    - name: 🚀 Deploy to VPS
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
           cd ${{ secrets.DEPLOY_PATH }}
