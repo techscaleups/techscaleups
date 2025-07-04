@@ -1,29 +1,27 @@
-name: Deploy to VPS
+name: 🚀 Auto Deploy to VPS
 
 on:
   push:
     branches:
-      - main
+      - main  # or 'master'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: ⬇️ Checkout Code
+      uses: actions/checkout@v3
 
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+    - name: 🔐 Setup SSH Agent
+      uses: webfactory/ssh-agent@v0.7.0
+      with:
+        ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
-      - name: Deploy to VPS
-        run: |
-          ssh ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} "
-            cd /var/www/html/techscaleups &&
-            git pull origin main &&
-            chown -R www-data:www-data /var/www/html/techscaleups
-          "
+    - name: 🚀 Deploy
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
+          cd ${{ secrets.DEPLOY_PATH }}
+          git pull origin main
+          systemctl reload nginx
+        EOF
