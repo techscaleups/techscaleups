@@ -4,13 +4,13 @@
   });
 
 
-   fetch("footer.html")
+   fetch("footer-down.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("footer-placeholder").innerHTML = data;
     });
 
-     fetch("navbar.html")
+     fetch("header-navbar.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("navbar-placeholder").innerHTML = data;
