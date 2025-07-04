@@ -10,18 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: ⬇️ Checkout code
-      uses: actions/checkout@v3
+      - name: ⬇️ Checkout code
+        uses: actions/checkout@v3
 
-    - name: 🔐 Setup SSH
-      uses: webfactory/ssh-agent@v0.7.0
-      with:
-        ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+      - name: 🔐 Setup SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
-    - name: 🚀 Deploy to VPS
-      run: |
-        ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
-          cd ${{ secrets.DEPLOY_PATH }}
-          git pull origin main
-          systemctl reload nginx
-        EOF
+      - name: 🚀 Deploy to VPS
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
+            cd ${{ secrets.DEPLOY_PATH }}
+            git pull origin main
+            systemctl reload nginx
+          EOF
