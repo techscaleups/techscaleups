@@ -3,17 +3,17 @@ name: 🚀 Auto Deploy to VPS
 on:
   push:
     branches:
-      - main  # change to your branch if not 'main'
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: ⬇️ Checkout Code
+    - name: ⬇️ Checkout code
       uses: actions/checkout@v3
 
-    - name: 🔐 Setup SSH Agent
+    - name: 🔐 Setup SSH
       uses: webfactory/ssh-agent@v0.7.0
       with:
         ssh-private-key: ${{ secrets.DEPLOY_KEY }}
