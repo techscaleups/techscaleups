@@ -23,10 +23,9 @@
   <!-- ✅ Firebase v8 SDK -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-
-  <script>
-    // ✅ Your Firebase config
-    const firebaseConfig = {
+<script>
+  const firebaseConfig = {
+     
       apiKey: "AIzaSyChb4zsHiJ9iGuxmYHlWMM6U2hemNvxB44",
       authDomain: "otpsms-bbb25.firebaseapp.com",
       projectId: "otpsms-bbb25",
@@ -34,73 +33,63 @@
       messagingSenderId: "828378358902",
       appId: "1:828378358902:web:f11ac3db3da96c03abab57",
       measurementId: "G-935540D9PZ"
-    };
+ 
+  };
 
-    // ✅ Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
 
-    let confirmationResult;
+  let confirmationResult;
 
-    // ✅ Send OTP
-    function sendOTP() {
-      const phone = document.getElementById("phone").value;
-      if (!phone.startsWith("+91")) {
-        alert("Phone number must start with +91");
-        return;
-      }
-
-      window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
-        size: 'invisible',
-        callback: function(response) {
-          console.log("reCAPTCHA verified");
-        }
-      });
-
-      firebase.auth().signInWithPhoneNumber(phone, window.recaptchaVerifier)
-        .then((result) => {
-          confirmationResult = result;
-          alert("✅ OTP Sent");
-        })
-        .catch((error) => {
-          console.error(error);
-          alert("❌ Error sending OTP: " + error.message);
-        });
-    }
-
-    // ✅ Verify OTP and show user info
-    function verifyOTP() {
-      const otp = document.getElementById("otp").value;
-
-      if (!confirmationResult) {
-        alert("Send OTP first");
-        return;
-      }
-
-      confirmationResult.confirm(otp)
-        .then((result) => {
-          const user = result.user;
-          document.getElementById("user-info").innerHTML = `
-            <h3>✅ Login Successful</h3>
-            <p><strong>User ID:</strong> ${user.uid}</p>
-            <p><strong>Phone Number:</strong> ${user.phoneNumber}</p>
-          `;
-        })
-        .catch((error) => {
-          console.error(error);
-          alert("❌ Invalid OTP");
-        });
-    }
-
-    // ✅ Optional: Check if user is already logged in
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        document.getElementById("user-info").innerHTML = `
-          <h3>✅ Already Logged In</h3>
-          <p><strong>User ID:</strong> ${user.uid}</p>
-          <p><strong>Phone Number:</strong> ${user.phoneNumber}</p>
-        `;
+  // ✅ Create reCAPTCHA only ONCE on page load
+  window.onload = function () {
+    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+      size: 'invisible',
+      callback: function (response) {
+        console.log('reCAPTCHA verified');
       }
     });
-  </script>
+
+    // ✅ Render reCAPTCHA immediately (important)
+    recaptchaVerifier.render();
+  };
+
+  function sendOTP() {
+    const phone = document.getElementById("phone").value;
+    if (!phone.startsWith("+91")) {
+      alert("Phone number must start with +91");
+      return;
+    }
+
+    firebase.auth().signInWithPhoneNumber(phone, window.recaptchaVerifier)
+      .then((result) => {
+        confirmationResult = result;
+        alert("✅ OTP Sent");
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("❌ Error sending OTP: " + error.message);
+      });
+  }
+
+  function verifyOTP() {
+    const otp = document.getElementById("otp").value;
+
+    if (!confirmationResult) {
+      alert("Send OTP first");
+      return;
+    }
+
+    confirmationResult.confirm(otp)
+      .then((result) => {
+        const user = result.user;
+        alert("✅ Login Success\nUser ID: " + user.uid);
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("❌ Invalid OTP");
+      });
+  }
+</script>
+
 </body>
 </html>
