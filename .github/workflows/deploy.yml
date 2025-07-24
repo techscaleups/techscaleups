@@ -1,25 +1,24 @@
-name: Deploy to VPS
+name: 🚀 Deploy to VPS
 
 on:
   push:
     branches:
-      - main
+      - main  # Or your deployment branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy to VPS using SCP
+      - name: Deploy via SCP
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_KEY }}
-          source: "."
-          target: "/var/www/techscaleups"
-          strip_components: 1
-          scp_ignore: ".scpignore"
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          port: 22
+          source: "./"                   # Adjust if you only want to send dist/, etc.
+          target: ${{ secrets.DEPLOY_PATH }}
