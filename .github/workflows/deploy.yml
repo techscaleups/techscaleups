@@ -19,6 +19,4 @@ jobs:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
-          port: 22
-          source: "./"                   # Adjust if you only want to send dist/, etc.
           target: ${{ secrets.DEPLOY_PATH }}
