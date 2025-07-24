@@ -1,4 +1,4 @@
-name: 🚀 Deploy Static HTML to VPS
+name: 🚀 Deploy to VPS
 
 on:
   push:
@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy HTML via SCP
+      - name: Deploy via SCP
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
-          source: "./"                   # Adjust this to your HTML folder if needed
+          source: "./*"
           target: ${{ secrets.DEPLOY_PATH }}
